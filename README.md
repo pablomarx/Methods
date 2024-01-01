@@ -8,14 +8,14 @@ The decompression array can be recovered from within Methods by evaluating:
 ```
 | file |
 file := Disk newFile: (File fileName: 'tokens' extension: 'txt').
-file lineDelimeter: 10 asCharacter.
+file lineDelimiter: 10 asCharacter.
 DecompressionArray do: [ :each |
-file nextPut: each; cr.
+file nextPutAll: each; cr.
 ].
 file close.
 ```
 
-![Screenshot 2023-12-31 at 11 26 07](https://github.com/pablomarx/Methods/assets/179162/04bd8a4d-70d6-41ea-99ef-44f0af357573)
+![Screenshot 2023-12-31 at 21 10 18](https://github.com/pablomarx/Methods/assets/179162/4b5c6172-8e1b-44d8-8af7-063cd6cd420f)
 
 
 And the following Python code can be used to then decompress the sources:
